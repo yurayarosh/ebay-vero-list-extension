@@ -1,0 +1,17 @@
+{
+  "name": "VeRO Ebay Extension",
+  "description": "Check selected text for VeRO words",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "storage"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
